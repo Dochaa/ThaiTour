@@ -1,0 +1,48 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="general.master.vb" Inherits="WEBpartcar.general" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="center">
+   <form id="form1" runat="server">
+        <div style="text-align:center">       
+            <table style="width:1200px">
+                <asp:ImageButton ID="ImageButton1" runat="server" Width="1000px" ImageUrl="~/image/รูปทัวร์.jpg" />
+
+                <tr style="text-align:center">
+                  <td >
+                      <asp:Menu ID="Menu1" runat="server" BackColor="#FFDAB9" BorderColor="White" DynamicHorizontalOffset="2" Font-Names="Verdana" Font-Size="Larger" ForeColor="black" Orientation="Horizontal" StaticSubMenuIndent="20px" Width="1200px">
+                          <DynamicHoverStyle BackColor="#003399" ForeColor="White" BorderColor="White" />
+                          <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" BackColor="#003399" BorderColor="White" ForeColor="White" />
+                          <DynamicMenuStyle BackColor="#FFFBD6" />
+                          <DynamicSelectedStyle BackColor="#003399" BorderColor="White" />
+                          <Items>
+                              <asp:MenuItem Text="หน้าแรก |" Value="หน้าแรก |" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                              <asp:MenuItem Text="รายละเอียดเว็บไซค์ |" Value="รายละเอียดการซิ่ง |" NavigateUrl="~/center.aspx"></asp:MenuItem>
+                              <asp:MenuItem Text="แพ็คเกจทัวร์ |" Value="รายละเอียดแพ็คเกจทัวร์ |" NavigateUrl="~/informationproduct.aspx">
+                                  </asp:MenuItem>
+                              <asp:MenuItem Text="ติดต่อเรา |" Value="ติดต่อเรา |" NavigateUrl="~/about.aspx"></asp:MenuItem>
+                              <asp:MenuItem NavigateUrl="~/LOGIN.aspx" Text="เข้าสู่ระบบ |" Value="LOGIN |"></asp:MenuItem>
+                              <asp:MenuItem Value="REGISTER" NavigateUrl="~/register.aspx" Text="สมัครสมาชิก"></asp:MenuItem>
+                          </Items>
+                          <StaticHoverStyle BackColor="Blue" ForeColor="White" />
+                          <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                          <StaticSelectedStyle BackColor="#FFCC66" />
+                      </asp:Menu>
+                  </td>
+              </tr>
+                <tr>
+                  <td style="text-align:center" >
+                      <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                  </td>
+              </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
